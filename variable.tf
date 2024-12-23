@@ -70,3 +70,8 @@ variable "database_subnets" {
       error_message = "Please provide only 2 cidrs for database subnet"
     }
 }
+
+variable "is_peering_required" {
+  type = bool
+  default = false
+}
