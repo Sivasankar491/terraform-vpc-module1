@@ -28,6 +28,7 @@ resource "aws_subnet" "public" {
   vpc_id     = aws_vpc.main.id
   availability_zone = local.az_names[count.index]
   cidr_block = var.public_subnets[count.index]
+  map_public_ip_on_launch = true
 
   tags = merge (
     var.public_subnet_tags,
