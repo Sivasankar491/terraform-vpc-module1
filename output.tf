@@ -15,13 +15,13 @@ output "default_vpc_route_table" {
 }
 
 output "public_subnets_id" {
-  value = aws_subnet.public.id
+  value = aws_subnet.public[count.index].id
 }
 
 output "private_subnets_id" {
-  value = aws_subnet.private.id
+  value = aws_subnet.private[count.index].id
 }
 
 output "database_subnets_id" {
-  value = aws_subnet.database
+  value = aws_subnet.database[count.index].id
 }
