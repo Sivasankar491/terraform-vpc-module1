@@ -13,3 +13,15 @@ output "default_vpc" {
 output "default_vpc_route_table" {
     value = data.aws_route_table.main
 }
+
+output "public_subnets_id" {
+  value = aws_subnet.public.id
+}
+
+output "private_subnets_id" {
+  value = aws_subnet.private.id
+}
+
+output "database_subnets_id" {
+  value = aws_subnet.database
+}
